@@ -1,0 +1,32 @@
+{
+  "name": "meantwo-v2.0",
+  "version": "2.0.0",
+  "description": "Mean stack application using angular 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiyushGirdhar/MeanTwo-v2.0.git"
+  },
+  "keywords": [
+    "blog",
+    "feed",
+    "chat",
+    "app",
+    "news",
+    "shopping",
+    "cart"
+  ],
+  "author": "Piyush Girdhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PiyushGirdhar/MeanTwo-v2.0/issues"
+  },
+  "homepage": "https://github.com/PiyushGirdhar/MeanTwo-v2.0#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "mongoose": "^4.12.0"
+  }
+}
