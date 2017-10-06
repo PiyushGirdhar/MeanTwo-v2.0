@@ -3,9 +3,12 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const path = require('path');
+const router = express.Router();
+const bodyParser = require('body-parser');
 
 // Calling the dependencies
 const config = require('./config/database');
+const authentication = require('./routes/authentication')(router);
 
 // Assigning the port number
 const port = 8080;
@@ -20,6 +23,9 @@ mongoose.connect(config.uri, { useMongoClient: true, promiseLibrary: global.Prom
 });
 
 // Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use('/authentication', authentication);
 app.use(express.static(__dirname + '/client/dist'));
 
 // Adding Routes
